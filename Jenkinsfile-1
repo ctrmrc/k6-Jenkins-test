@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('verify k6') {
       steps {
-        echo 'HOPHAYLALALEY'
+        bat 'k6 version'
       }
     }
     stage('run k6 test') {
       steps {
-        sh 'k6 run script.js'
+        bat 'k6 run script.js'
       }
     }
   }
