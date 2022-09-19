@@ -8,7 +8,7 @@ pipeline {
     }
     stage('run k6 test') {
       steps {
-        sh 'k6 run script.js'
+        sh 'docker run --rm -i grafana/k6 run - <script.js'
       }
     }
   }
