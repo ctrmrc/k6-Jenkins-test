@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('verify k6') {
       steps {
-        echo 'k6 version'
+        sh 'k6 version'
       }
     }
     stage('run k6 test') {
-      steps { 
-        sh 'docker run --rm -i grafana/k6 run - <script.js'
+      steps {
+        sh 'k6 run script.js'
       }
     }
   }
