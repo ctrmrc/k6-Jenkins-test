@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('verify k6') {
       steps {
-        sh 'k6 version'
+        echo 'k6 version'
       }
     }
     stage('run k6 test') {
